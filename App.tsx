@@ -1,7 +1,7 @@
 import { ariesAskar } from '@hyperledger/aries-askar-react-native'
 import { indyVdr } from '@hyperledger/indy-vdr-react-native'
 import { anoncreds } from '@hyperledger/anoncreds-react-native'
-import React, { useEffect } from 'react'
+import React, { useEffect, useState } from 'react'
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native'
 
 import {
@@ -11,15 +11,23 @@ import {
   LearnMoreLinks,
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen'
+import { agent } from './agent'
 
 const Section = ({ children, title }) => {
   const isDarkMode = useColorScheme() === 'dark'
+  const [isInitializing, setIsInitializing] = useState(false)
 
   useEffect(() => {
     console.log({
       askar: ariesAskar.version(),
       indyVdr: indyVdr.version(),
       anoncreds: anoncreds.version(),
+    })
+    if (isInitializing) return
+    setIsInitializing(true)
+
+    agent.initialize().then(() => {
+      setIsInitializing(false)
     })
   }, [])
 
