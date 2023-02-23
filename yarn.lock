@@ -980,15 +980,14 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@hyperledger/anoncreds-react-native@^0.1.0-dev.8":
-  version "0.1.0-dev.8"
-  resolved "https://registry.yarnpkg.com/@hyperledger/anoncreds-react-native/-/anoncreds-react-native-0.1.0-dev.8.tgz#f85da39e8cbcc4f0cc3cfcc1fc6f7f26b4e18693"
-  integrity sha512-Tpu7t5KX/1P5h5PFZSdOWnfRXLalgEBLAGNvLRtC9DCKLnz2JgYzY3zfO5kYwdTxIlmXOhMd50IdlR30ymCBFQ==
+"@hyperledger/anoncreds-react-native@file:./hyperledger-anoncreds-react-native-v0.1.0-dev.8-local.1.tgz":
+  version "0.1.0-dev.8-local.1"
+  resolved "file:./hyperledger-anoncreds-react-native-v0.1.0-dev.8-local.1.tgz#8ed0b2bf6c0b70880054269fa7d4df6d0fcc90fa"
   dependencies:
     "@hyperledger/anoncreds-shared" "0.1.0-dev.8"
     "@mapbox/node-pre-gyp" "^1.0.10"
 
-"@hyperledger/anoncreds-shared@0.1.0-dev.8", "@hyperledger/anoncreds-shared@^0.1.0-dev.6":
+"@hyperledger/anoncreds-shared@0.1.0-dev.8", "@hyperledger/anoncreds-shared@^0.1.0-dev.6", "@hyperledger/anoncreds-shared@^0.1.0-dev.8":
   version "0.1.0-dev.8"
   resolved "https://registry.yarnpkg.com/@hyperledger/anoncreds-shared/-/anoncreds-shared-0.1.0-dev.8.tgz#991ee8079435f6865f6b1c39b87ff6dfaf67ad3e"
   integrity sha512-yJBgFPcRX2JSYkOctdubL9YYji9rYo+A6qDBrk3ClSNYdH5TFfl02da6ZbNp+iyOyhmbKV3GO1MTD8/fGEyxkw==
@@ -1008,15 +1007,14 @@
   dependencies:
     fast-text-encoding "^1.0.3"
 
-"@hyperledger/indy-vdr-react-native@^0.1.0-dev.9":
-  version "0.1.0-dev.9"
-  resolved "https://registry.yarnpkg.com/@hyperledger/indy-vdr-react-native/-/indy-vdr-react-native-0.1.0-dev.9.tgz#5d4813e4ef4c6b387c050e04bcf37831556236ac"
-  integrity sha512-9Q4N8P6V7w3aEUloh4rrsSL8iF3p7CZE5E3skCsx0z05XVgchV13JrL+DDERUX6fVYllnqNz3B9mV9+eN5Xl4A==
+"@hyperledger/indy-vdr-react-native@file:./hyperledger-indy-vdr-react-native-v0.1.0-dev.9-local.1.tgz":
+  version "0.1.0-dev.9-local.1"
+  resolved "file:./hyperledger-indy-vdr-react-native-v0.1.0-dev.9-local.1.tgz#2e0320460d206e849d9f1dfa939d291762563ec9"
   dependencies:
     "@hyperledger/indy-vdr-shared" "0.1.0-dev.9"
     "@mapbox/node-pre-gyp" "^1.0.10"
 
-"@hyperledger/indy-vdr-shared@0.1.0-dev.9", "@hyperledger/indy-vdr-shared@^0.1.0-dev.6":
+"@hyperledger/indy-vdr-shared@0.1.0-dev.9", "@hyperledger/indy-vdr-shared@^0.1.0-dev.6", "@hyperledger/indy-vdr-shared@^0.1.0-dev.9":
   version "0.1.0-dev.9"
   resolved "https://registry.yarnpkg.com/@hyperledger/indy-vdr-shared/-/indy-vdr-shared-0.1.0-dev.9.tgz#b257c1ca75690812598e4606386c618e652d3f8c"
   integrity sha512-n7W0YYVRad2AFD13RtZJ+xduUyz2Th6erfVW+7w21K04whyhsoPj9VTda2PtFGzPPNbZzrzRyEwdYNzsvy2GXQ==
