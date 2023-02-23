@@ -1,3 +1,6 @@
+import '@hyperledger/aries-askar-react-native'
+import '@hyperledger/indy-vdr-react-native'
+import '@hyperledger/anoncreds-react-native'
 import {
   AnonCredsModule,
   LegacyIndyCredentialFormatService,

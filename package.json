@@ -7,7 +7,8 @@
     "ios": "react-native run-ios",
     "start": "react-native start",
     "test": "jest",
-    "lint": "eslint ."
+    "lint": "eslint .",
+    "postinstall": "patch-package"
   },
   "dependencies": {
     "@aries-framework/anoncreds": "^0.4.0-alpha.44",
@@ -33,6 +34,7 @@
     "eslint": "^7.32.0",
     "jest": "^26.6.3",
     "metro-react-native-babel-preset": "0.72.3",
+    "patch-package": "^6.5.1",
     "react-test-renderer": "18.1.0"
   },
   "jest": {
