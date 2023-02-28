@@ -12,22 +12,29 @@ import {
   ReloadInstructions,
 } from 'react-native/Libraries/NewAppScreen'
 import { agent } from './agent'
+import { KeyType } from '@aries-framework/core'
+import { AskarWallet } from '@aries-framework/askar'
 
-const Section = ({ children, title }) => {
+const AgentView = ({ }) => {
   const isDarkMode = useColorScheme() === 'dark'
   const [isInitializing, setIsInitializing] = useState(false)
-
+  const [versions, setVersions] = useState('')
   useEffect(() => {
     console.log({
       askar: ariesAskar.version(),
       indyVdr: indyVdr.version(),
       anoncreds: anoncreds.version(),
     })
+    setVersions(`askar: ${ariesAskar.version()} indyVdr: ${indyVdr.version()} anoncreds: ${anoncreds.version()}`)
     if (isInitializing) return
     setIsInitializing(true)
 
     agent.initialize().then(() => {
       setIsInitializing(false)
+
+      const key = agent.context.wallet.createKey({ keyType: KeyType.Ed25519 }).then(key => {
+        ;(agent.context.wallet as AskarWallet).session.fetchKey({ name: key.publicKeyBase58 })
+      })
     })
   }, [])
 
@@ -41,7 +48,7 @@ const Section = ({ children, title }) => {
           },
         ]}
       >
-        {title}
+        AFJ Shared components RN sample tests
       </Text>
       <Text
         style={[
@@ -51,7 +58,7 @@ const Section = ({ children, title }) => {
           },
         ]}
       >
-        {children}
+        {versions}
       </Text>
     </View>
   )
@@ -66,31 +73,7 @@ const App = () => {
 
   return (
     <SafeAreaView style={backgroundStyle}>
-      <StatusBar
-        barStyle={isDarkMode ? 'light-content' : 'dark-content'}
-        backgroundColor={backgroundStyle.backgroundColor}
-      />
-      <ScrollView contentInsetAdjustmentBehavior="automatic" style={backgroundStyle}>
-        <Header />
-        <View
-          style={{
-            backgroundColor: isDarkMode ? Colors.black : Colors.white,
-          }}
-        >
-          <Section title="Step One">
-            Edit <Text style={styles.highlight}>App.js</Text> to change this screen and then come back to see your
-            edits.
-          </Section>
-          <Section title="See Your Changes">
-            <ReloadInstructions />
-          </Section>
-          <Section title="Debug">
-            <DebugInstructions />
-          </Section>
-          <Section title="Learn More">Read the docs to discover what to do next:</Section>
-          <LearnMoreLinks />
-        </View>
-      </ScrollView>
+      <AgentView />
     </SafeAreaView>
   )
 }

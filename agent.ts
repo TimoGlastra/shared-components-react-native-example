@@ -29,6 +29,7 @@ import {
   V2ProofProtocol,
   WebDidResolver,
   WsOutboundTransport,
+  utils,
 } from '@aries-framework/core'
 import {
   IndyVdrAnonCredsRegistry,
@@ -46,12 +47,13 @@ const indyCredentialFormat = new LegacyIndyCredentialFormatService()
 export const agent = new Agent({
   config: {
     label: 'Demo Agent',
+    autoUpdateStorageOnStartup: false,
     walletConfig: {
-      id: 'demo-agent',
+      id: `demo-agent-${utils.uuid()}`,
       key: 'demo-agent-key',
     },
     // Change to view logs in terminal
-    logger: new ConsoleLogger(LogLevel.off),
+    logger: new ConsoleLogger(LogLevel.debug),
   },
   modules: {
     // Storage
