@@ -17,9 +17,9 @@
     "@aries-framework/core": "^0.4.0-alpha.44",
     "@aries-framework/indy-vdr": "^0.4.0-alpha.44",
     "@aries-framework/react-native": "^0.4.0-alpha.44",
-    "@hyperledger/anoncreds-react-native": "file:./hyperledger-anoncreds-react-native-v0.1.0-dev.8-local.1.tgz",
-    "@hyperledger/aries-askar-react-native": "^0.1.0-dev.3",
-    "@hyperledger/indy-vdr-react-native": "file:./hyperledger-indy-vdr-react-native-v0.1.0-dev.9-local.1.tgz",
+    "@hyperledger/anoncreds-react-native": "../anoncreds-rs/wrappers/javascript/anoncreds-react-native",
+    "@hyperledger/aries-askar-react-native": "../aries-askar/wrappers/javascript/aries-askar-react-native",
+    "@hyperledger/indy-vdr-react-native": "../indy-vdr/wrappers/javascript/indy-vdr-react-native",
     "react": "18.1.0",
     "react-native": "0.70.6",
     "react-native-fs": "^2.20.0",
@@ -43,11 +43,11 @@
   "resolutions": {
     "@unimodules/react-native-adapter": "./noop",
     "@unimodules/core": "./noop",
-    "@hyperledger/anoncreds-react-native": "file:./hyperledger-anoncreds-react-native-v0.1.0-dev.8-local.1.tgz",
-    "@hyperledger/aries-askar-react-native": "^0.1.0-dev.3",
-    "@hyperledger/indy-vdr-react-native": "file:./hyperledger-indy-vdr-react-native-v0.1.0-dev.9-local.1.tgz",
-    "@hyperledger/anoncreds-shared": "^0.1.0-dev.8",
-    "@hyperledger/aries-askar-shared": "^0.1.0-dev.3",
-    "@hyperledger/indy-vdr-shared": "^0.1.0-dev.9"
+    "@hyperledger/anoncreds-react-native": "../anoncreds-rs/wrappers/javascript/anoncreds-react-native",
+    "@hyperledger/aries-askar-react-native": "../aries-askar/wrappers/javascript/aries-askar-react-native",
+    "@hyperledger/indy-vdr-react-native": "../indy-vdr/wrappers/javascript/indy-vdr-react-native",
+    "@hyperledger/anoncreds-shared": "../anoncreds-rs/wrappers/javascript/anoncreds-shared",
+    "@hyperledger/aries-askar-shared": "../aries-askar/wrappers/javascript/aries-askar-shared",
+    "@hyperledger/indy-vdr-shared": "../indy-vdr/wrappers/javascript/indy-vdr-shared"
   }
 }

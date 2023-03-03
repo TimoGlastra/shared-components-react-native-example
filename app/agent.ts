@@ -1,4 +1,4 @@
-import '@hyperledger/aries-askar-react-native'
+import { ariesAskar } from '@hyperledger/aries-askar-react-native'
 import '@hyperledger/indy-vdr-react-native'
 import '@hyperledger/anoncreds-react-native'
 import {
@@ -43,6 +43,10 @@ import {
 // v1/v2 proof/credential protocol
 const indyProofFormat = new LegacyIndyProofFormatService()
 const indyCredentialFormat = new LegacyIndyCredentialFormatService()
+
+// indyVdr.setDefaultLogger()
+// ariesAskar.setDefaultLogger()
+// anoncreds
 
 export const agent = new Agent({
   config: {
