@@ -6,3 +6,9 @@ Use with local versions of the shared components libraires
    - will run yarn install for all wrappers
 2. run `./build-libraries`
    - will run yarn build for all wrappers
+
+## Update submodule
+
+```
+git submodule update --remote
+```
