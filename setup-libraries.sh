@@ -12,3 +12,7 @@ cd indy-vdr/wrappers/javascript
 rm indy-vdr-react-native/native/indy_vdr.node
 yarn install
 cd -
+
+cd aries-framework-javascript
+yarn install
+cd -

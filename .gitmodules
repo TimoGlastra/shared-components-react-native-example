@@ -10,3 +10,7 @@
 	path = aries-askar
 	url = git@github.com:animo/aries-askar
 	branch = fixes
+[submodule "aries-framework-javascript"]
+	path = aries-framework-javascript
+	url = git@github.com:animo/aries-framework-javascript
+	branch = fixes

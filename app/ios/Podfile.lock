@@ -1,5 +1,5 @@
 PODS:
-  - anoncreds (0.1.0-dev.8-local.1):
+  - anoncreds (0.1.0-dev.8):
     - React
     - React-callinvoker
     - React-Core
@@ -82,7 +82,7 @@ PODS:
   - fmt (6.2.1)
   - glog (0.3.5)
   - hermes-engine (0.70.6)
-  - indy-vdr (0.1.0-dev.9-local.1):
+  - indy-vdr (0.1.0-dev.9):
     - React
     - React-callinvoker
     - React-Core
@@ -554,7 +554,7 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  anoncreds: 814858ecffd314d76cfaac236acbdadb2be20f46
+  anoncreds: 5f43a37312072caffc71a3c51a0002f8f337df20
   aries-askar: 060d122728bc8d3dcc0c2b3aed928d4f6493958c
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
@@ -573,7 +573,7 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 2af7b7a59128f250adfd86f15aa1d5a2ecd39995
-  indy-vdr: 6ae6762277c1dcb8e8bc89b6d61789aaa85c0d33
+  indy-vdr: 819b4766ceb58689537faf558d437de0422817a8
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda

@@ -11,3 +11,7 @@ cd -
 cd indy-vdr/wrappers/javascript
 rm -rf node_modules
 cd -
+
+cd aries-framework-javascript
+rm -rf node_modules
+cd -
