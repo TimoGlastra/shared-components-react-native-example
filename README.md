@@ -12,3 +12,15 @@ Use with local versions of the shared components libraires
 ```
 git submodule update --remote
 ```
+
+### Quick run ios:
+
+```
+make all ios
+```
+
+### Quick run android:
+
+```
+make all android
+```
