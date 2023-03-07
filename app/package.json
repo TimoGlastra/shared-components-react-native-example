@@ -11,13 +11,10 @@
     "postinstall": "patch-package"
   },
   "dependencies": {
-    "@aries-framework/anoncreds": "../aries-framework-javascript/packages/anoncreds",
-    "@aries-framework/anoncreds-rs": "../aries-framework-javascript/packages/anoncreds-rs",
     "@aries-framework/askar": "../aries-framework-javascript/packages/askar",
     "@aries-framework/core": "../aries-framework-javascript/packages/core",
     "@aries-framework/indy-vdr": "../aries-framework-javascript/packages/indy-vdr",
     "@aries-framework/react-native": "../aries-framework-javascript/packages/react-native",
-    "@hyperledger/anoncreds-react-native": "../anoncreds-rs/wrappers/javascript/anoncreds-react-native",
     "@hyperledger/aries-askar-react-native": "../aries-askar/wrappers/javascript/aries-askar-react-native",
     "@hyperledger/indy-vdr-react-native": "../indy-vdr/wrappers/javascript/indy-vdr-react-native",
     "react": "18.1.0",
@@ -43,14 +40,10 @@
   "resolutions": {
     "@unimodules/react-native-adapter": "./noop",
     "@unimodules/core": "./noop",
-    "@hyperledger/anoncreds-react-native": "../anoncreds-rs/wrappers/javascript/anoncreds-react-native",
     "@hyperledger/aries-askar-react-native": "../aries-askar/wrappers/javascript/aries-askar-react-native",
     "@hyperledger/indy-vdr-react-native": "../indy-vdr/wrappers/javascript/indy-vdr-react-native",
-    "@hyperledger/anoncreds-shared": "../anoncreds-rs/wrappers/javascript/anoncreds-shared",
     "@hyperledger/aries-askar-shared": "../aries-askar/wrappers/javascript/aries-askar-shared",
     "@hyperledger/indy-vdr-shared": "../indy-vdr/wrappers/javascript/indy-vdr-shared",
-    "@aries-framework/anoncreds": "../aries-framework-javascript/packages/anoncreds",
-    "@aries-framework/anoncreds-rs": "../aries-framework-javascript/packages/anoncreds-rs",
     "@aries-framework/askar": "../aries-framework-javascript/packages/askar",
     "@aries-framework/core": "../aries-framework-javascript/packages/core",
     "@aries-framework/indy-vdr": "../aries-framework-javascript/packages/indy-vdr",

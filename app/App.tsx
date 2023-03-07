@@ -1,42 +1,50 @@
 import { ariesAskar } from '@hyperledger/aries-askar-react-native'
 import { indyVdr } from '@hyperledger/indy-vdr-react-native'
-import { anoncreds } from '@hyperledger/anoncreds-react-native'
+// import * as anoncreds from '@hyperledger/anoncreds-react-native'
 import React, { useEffect, useState } from 'react'
 import { SafeAreaView, ScrollView, StatusBar, StyleSheet, Text, useColorScheme, View } from 'react-native'
 
-import {
-  Colors,
-  DebugInstructions,
-  Header,
-  LearnMoreLinks,
-  ReloadInstructions,
-} from 'react-native/Libraries/NewAppScreen'
+import { Colors } from 'react-native/Libraries/NewAppScreen'
 import { agent } from './agent'
-import { KeyType } from '@aries-framework/core'
-import { AskarWallet } from '@aries-framework/askar'
+import { ConnectionRecord } from '@aries-framework/core'
 
-const AgentView = ({ }) => {
+const AgentView = ({}) => {
   const isDarkMode = useColorScheme() === 'dark'
   const [isInitializing, setIsInitializing] = useState(false)
   const [versions, setVersions] = useState('')
+  const [connections, setConnections] = useState<ConnectionRecord[]>([])
   useEffect(() => {
     console.log({
       askar: ariesAskar.version(),
       indyVdr: indyVdr.version(),
-      anoncreds: anoncreds.version(),
     })
-    setVersions(`askar: ${ariesAskar.version()} indyVdr: ${indyVdr.version()} anoncreds: ${anoncreds.version()}`)
+    setVersions(`askar: ${ariesAskar.version()} indyVdr: ${indyVdr.version()}`)
     if (isInitializing) return
     setIsInitializing(true)
 
-    agent.initialize().then(() => {
-      setIsInitializing(false)
-
-      const key = agent.context.wallet.createKey({ keyType: KeyType.Ed25519 }).then(key => {
-        ;(agent.context.wallet as AskarWallet).session.fetchKey({ name: key.publicKeyBase58 })
+    agent
+      .initialize()
+      .then(async () => {
+        setIsInitializing(false)
       })
-    })
+      .catch((e) => {
+        console.log('error hier', e.stack)
+      })
   }, [])
+
+  useEffect(() => {
+    if (!isInitializing && agent.isInitialized) {
+      const clear = setInterval(() => {
+        agent.connections.getAll().then((connections) => {
+          setConnections(connections)
+        })
+      }, 2000)
+
+      return () => {
+        clearInterval(clear)
+      }
+    }
+  }, [isInitializing])
 
   return (
     <View style={styles.sectionContainer}>
@@ -60,6 +68,14 @@ const AgentView = ({ }) => {
       >
         {versions}
       </Text>
+      <Text />
+      <Text />
+      <Text />
+      {connections.map((c) => (
+        <Text style={{ marginTop: 3 }} key={c.id}>
+          {c.id.substring(0, 4)} - {c.theirLabel}
+        </Text>
+      ))}
     </View>
   )
 }

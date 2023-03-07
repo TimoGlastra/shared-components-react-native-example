@@ -10,25 +10,6 @@
     "@jridgewell/gen-mapping" "^0.1.0"
     "@jridgewell/trace-mapping" "^0.3.9"
 
-"@aries-framework/anoncreds-rs@../aries-framework-javascript/packages/anoncreds-rs":
-  version "0.3.3"
-  dependencies:
-    "@aries-framework/anoncreds" "0.3.3"
-    "@aries-framework/core" "0.3.3"
-    "@hyperledger/anoncreds-shared" "^0.1.0-dev.6"
-    class-transformer "^0.5.1"
-    class-validator "^0.14.0"
-    rxjs "^7.2.0"
-    tsyringe "^4.7.0"
-
-"@aries-framework/anoncreds@../aries-framework-javascript/packages/anoncreds", "@aries-framework/anoncreds@0.3.3":
-  version "0.3.3"
-  dependencies:
-    "@aries-framework/core" "0.3.3"
-    bn.js "^5.2.1"
-    class-transformer "0.5.1"
-    class-validator "0.13.1"
-
 "@aries-framework/askar@../aries-framework-javascript/packages/askar":
   version "0.3.3"
   dependencies:
@@ -73,7 +54,6 @@
 "@aries-framework/indy-vdr@../aries-framework-javascript/packages/indy-vdr":
   version "0.3.3"
   dependencies:
-    "@aries-framework/anoncreds" "0.3.3"
     "@aries-framework/core" "0.3.3"
     "@hyperledger/indy-vdr-shared" "^0.1.0-dev.6"
 
@@ -954,15 +934,6 @@
   resolved "https://registry.yarnpkg.com/@humanwhocodes/object-schema/-/object-schema-1.2.1.tgz#b520529ec21d8e5945a1851dfd1c32e94e39ff45"
   integrity sha512-ZnQMnLV4e7hDlUvw8H+U8ASL02SS2Gn6+9Ac3wGGLIe7+je2AeAOxPY+izIPJDfFDb7eDjev0Us8MO1iFRN8hA==
 
-"@hyperledger/anoncreds-react-native@../anoncreds-rs/wrappers/javascript/anoncreds-react-native":
-  version "0.1.0-dev.8"
-  dependencies:
-    "@hyperledger/anoncreds-shared" "0.1.0-dev.8"
-    "@mapbox/node-pre-gyp" "^1.0.10"
-
-"@hyperledger/anoncreds-shared@../anoncreds-rs/wrappers/javascript/anoncreds-shared", "@hyperledger/anoncreds-shared@0.1.0-dev.8", "@hyperledger/anoncreds-shared@^0.1.0-dev.6":
-  version "0.1.0-dev.8"
-
 "@hyperledger/aries-askar-react-native@../aries-askar/wrappers/javascript/aries-askar-react-native":
   version "0.1.0-dev.3"
   dependencies:
@@ -1651,9 +1622,9 @@
     form-data "^3.0.0"
 
 "@types/node@*":
-  version "18.14.5"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.5.tgz#4a13a6445862159303fc38586598a9396fc408b3"
-  integrity sha512-CRT4tMK/DHYhw1fcCEBwME9CSaZNclxfzVMe7GsO6ULSwsttbj70wSiX6rZdIjGblu93sTJxLdhNIT85KKI7Qw==
+  version "18.14.6"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-18.14.6.tgz#ae1973dd2b1eeb1825695bb11ebfb746d27e3e93"
+  integrity sha512-93+VvleD3mXwlLI/xASjw0FzKcwzl3OdTCzm1LaRfqgS21gfFtK3zDXM5Op9TeeMsJVOaJ2VRDpT9q4Y3d0AvA==
 
 "@types/normalize-package-data@^2.4.0":
   version "2.4.1"
@@ -2464,9 +2435,9 @@ camelcase@^6.0.0:
   integrity sha512-Gmy6FhYlCY7uOElZUSbxo2UCDH8owEk996gkbrpsgGtrJLM3J7jGxl9Ic7Qwwj4ivOE5AWZWRMecDdF7hqGjFA==
 
 caniuse-lite@^1.0.30001449:
-  version "1.0.30001460"
-  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001460.tgz#31d2e26f0a2309860ed3eff154e03890d9d851a7"
-  integrity sha512-Bud7abqjvEjipUkpLs4D7gR0l8hBYBHoa+tGtKJHvT2AYzLp1z7EmVkUT4ERpVUfca8S2HGIVs883D8pUH1ZzQ==
+  version "1.0.30001462"
+  resolved "https://registry.yarnpkg.com/caniuse-lite/-/caniuse-lite-1.0.30001462.tgz#b2e801e37536d453731286857c8520d3dcee15fe"
+  integrity sha512-PDd20WuOBPiasZ7KbFnmQRyuLE7cFXW2PVd7dmALzbkUXEP46upAuCDm9eY9vho8fgNMGmbAX92QBZHzcnWIqw==
 
 canonicalize@^1.0.1:
   version "1.0.8"
@@ -2982,9 +2953,9 @@ ee-first@1.1.1:
   integrity sha512-WMwm9LhRUo+WUaRN+vRuETqG89IgZphVSNkdFgeb6sS/E4OrDIN7t48CAewSHXc6C8lefD8KKfr5vY61brQlow==
 
 electron-to-chromium@^1.4.284:
-  version "1.4.317"
-  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.317.tgz#9a3d38a1a37f26a417d3d95dafe198ff11ed072b"
-  integrity sha512-JhCRm9v30FMNzQSsjl4kXaygU+qHBD0Yh7mKxyjmF0V8VwYVB6qpBRX28GyAucrM9wDCpSUctT6FpMUQxbyKuA==
+  version "1.4.322"
+  resolved "https://registry.yarnpkg.com/electron-to-chromium/-/electron-to-chromium-1.4.322.tgz#e0afa1d115b66c1d47869db40d8f2f3729cecc16"
+  integrity sha512-KovjizNC9XB7dno/2GjxX8VS0SlfPpCjtyoKft+bCO+UfD8bFy16hY4Sh9s0h9BDxbRH2U0zX5VBjpM1LTcNlg==
 
 emittery@^0.7.1:
   version "0.7.2"
@@ -6945,9 +6916,9 @@ source-map@^0.7.3:
   integrity sha512-l3BikUxvPOcn5E74dZiq5BGsTb5yEwhaTSzccU6t4sDOH8NWJCstKO5QT2CvtFoK6F0saL7p9xHAqHOlCPJygA==
 
 spdx-correct@^3.0.0:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.1.1.tgz#dece81ac9c1e6713e5f7d1b6f17d468fa53d89a9"
-  integrity sha512-cOYcUWwhCuHCXi49RhFRCyJEK3iPj1Ziz9DpViV3tbZOwXD49QzIN3MpOLJNxh2qwq2lJJZaKMVw9qNi4jTC0w==
+  version "3.2.0"
+  resolved "https://registry.yarnpkg.com/spdx-correct/-/spdx-correct-3.2.0.tgz#4f5ab0668f0059e34f9c00dce331784a12de4e9c"
+  integrity sha512-kN9dJbvnySHULIluDHy32WHRUu3Og7B9sbY7tsFLctQkIqnMh3hErYgdMjTYuqmcXX+lK5T1lnUt3G7zNswmZA==
   dependencies:
     spdx-expression-parse "^3.0.0"
     spdx-license-ids "^3.0.0"
