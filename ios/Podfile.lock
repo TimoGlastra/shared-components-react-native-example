@@ -1,5 +1,9 @@
 PODS:
-  - aries-askar (0.1.0-dev.3):
+  - anoncreds (0.1.0-dev.11):
+    - React
+    - React-callinvoker
+    - React-Core
+  - aries-askar (0.1.0-dev.6):
     - React
     - React-callinvoker
     - React-Core
@@ -78,10 +82,6 @@ PODS:
   - fmt (6.2.1)
   - glog (0.3.5)
   - hermes-engine (0.70.6)
-  - indy-vdr (0.1.0-dev.9):
-    - React
-    - React-callinvoker
-    - React-Core
   - libevent (2.1.12)
   - OpenSSL-Universal (1.1.1100)
   - RCT-Folly (2021.07.22.00):
@@ -386,6 +386,7 @@ PODS:
     - Yoga (~> 1.14)
 
 DEPENDENCIES:
+  - "anoncreds (from `../node_modules/@hyperledger/anoncreds-react-native`)"
   - "aries-askar (from `../node_modules/@hyperledger/aries-askar-react-native`)"
   - boost (from `../node_modules/react-native/third-party-podspecs/boost.podspec`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
@@ -414,7 +415,6 @@ DEPENDENCIES:
   - FlipperKit/SKIOSNetworkPlugin (= 0.125.0)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
   - hermes-engine (from `../node_modules/react-native/sdks/hermes/hermes-engine.podspec`)
-  - "indy-vdr (from `../node_modules/@hyperledger/indy-vdr-react-native`)"
   - libevent (~> 2.1.12)
   - OpenSSL-Universal (= 1.1.1100)
   - RCT-Folly (from `../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec`)
@@ -469,6 +469,8 @@ SPEC REPOS:
     - YogaKit
 
 EXTERNAL SOURCES:
+  anoncreds:
+    :path: "../node_modules/@hyperledger/anoncreds-react-native"
   aries-askar:
     :path: "../node_modules/@hyperledger/aries-askar-react-native"
   boost:
@@ -483,8 +485,6 @@ EXTERNAL SOURCES:
     :podspec: "../node_modules/react-native/third-party-podspecs/glog.podspec"
   hermes-engine:
     :podspec: "../node_modules/react-native/sdks/hermes/hermes-engine.podspec"
-  indy-vdr:
-    :path: "../node_modules/@hyperledger/indy-vdr-react-native"
   RCT-Folly:
     :podspec: "../node_modules/react-native/third-party-podspecs/RCT-Folly.podspec"
   RCTRequired:
@@ -547,7 +547,8 @@ EXTERNAL SOURCES:
     :path: "../node_modules/react-native/ReactCommon/yoga"
 
 SPEC CHECKSUMS:
-  aries-askar: 060d122728bc8d3dcc0c2b3aed928d4f6493958c
+  anoncreds: 0df6a440b9f0408f4f5ee9a3428cfecf36a8dbf3
+  aries-askar: fad2219c515a8f8efd90266738bb61769fe219b1
   boost: a7c83b31436843459a1961bfd74b96033dc77234
   CocoaAsyncSocket: 065fd1e645c7abab64f7a6a2007a48038fdc6a99
   DoubleConversion: 5189b271737e1565bdce30deb4a08d647e3f5f54
@@ -565,7 +566,6 @@ SPEC CHECKSUMS:
   fmt: ff9d55029c625d3757ed641535fd4a75fedc7ce9
   glog: 04b94705f318337d7ead9e6d17c019bd9b1f6b1b
   hermes-engine: 2af7b7a59128f250adfd86f15aa1d5a2ecd39995
-  indy-vdr: 819b4766ceb58689537faf558d437de0422817a8
   libevent: 4049cae6c81cdb3654a443be001fb9bdceff7913
   OpenSSL-Universal: ebc357f1e6bc71fa463ccb2fe676756aff50e88c
   RCT-Folly: 0080d0a6ebf2577475bda044aa59e2ca1f909cda
